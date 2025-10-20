@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sriram Portfolio</title>
+
+  <style>
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    /* ===== COLOR PALETTE ===== */
+    :root {
+      --primary: #171616;        
+      --background: #fdf6fc;   
+      --text: #2e2e2e;
+      --subtext: #7A0505;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body.night {
+      --primary: #EBECF5;
+      --background: #fdf6fc;
+      --text: #EBECF5;
+      --subtext:#84F207;
+      --shadow: rgba(0, 0, 0, 0.6);
+      background: url('') center center no-repeat;
+      background-size: 1000px auto;
+      background-attachment: fixed;
+      background-color: #000;
+    }
+
+    /* ===== BASE ===== */
+    body {
+      margin: 0;
+      font-family: 'Courier New', sans-serif;
+      background: url('') center center no-repeat;
+      background-size: 300px auto;
+      color: var(--text);
+      scroll-behavior: smooth;
+      transition: all 0.6s ease;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+      border-bottom: 2px solid var(--border);
+      top: 0;
+      z-index: 100;
+      transition: all 0.6s ease;
+    }
+
+    header h1 {
+      font-family: 'Courier New', monospace;
+      font-size: 2.2em;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--subtext);
+      font-weight: 600;
+      margin: 0 12px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* ===== CONTENT ===== */
+    main {
+      width: 85%;
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-family: 'arial', cursive;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      margin-top: 60px;
+    }
+
+    p {
+      color: var(--subtext);
+      font-size: 1.05em;
+      margin-bottom: 20px;
+    }
+
+    strong {
+      color: var(--primary);
+    }
+
+    /* ===== PROFILE ===== */
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid var(--border);
+      object-fit: cover;
+      box-shadow: 0 0 25px var(--shadow);
+      transition: transform 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    .profile img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== SKILLS ===== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: #050505;
+      color: #fff;
+      border-radius: 25px;
+      padding: 8px 16px;
+      font-weight: 600;
+      box-shadow: 0 2px 5px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+    
+    .skill:hover {
+      transform: scale(1.08);
+    }
+    
+    /* ===== LINKS ===== */
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+
+    /* ===== TOGGLE BUTTON ===== */
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 4px 10px var(--shadow);
+      transition: all 0.4s ease;
+      z-index: 2000;
+    }
+
+    .toggle-btn:hover {
+      transform: rotate(20deg) scale(1.1);
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--subtext);
+      border-top: 2px solid var(--border);
+      transition: all 0.6s ease;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Toggle Button -->
+  <button class="toggle-btn" id="toggleMode">🌙</button>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to my portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="about" class="profile">
+      <img src="profile.jpeg" alt="Sriram Photo" />
+      <h2>About Me</h2>
+      <p>
+        Hey there 👋! I'm Sriram, a passionate cybersecurity student who loves exploring Systems, CTFs, and digital forensics.My area of interest are in cyber security, Bug bounty and cyber forensics.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">Penetration Testing</div>
+        <div class="skill">VAPT</div>
+        <div class="skill">Python & Java</div>
+        <div class="skill">Linux / Kali</div>
+        <div class="skill">Forensics</div>
+        <div class="skill">Steganography</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p><strong>DNS Cache Poisoning Detection</strong> — Built a detection tool using Python and Scapy to monitor DNS traffic and identify spoofed responses with IP and TTL comparison.<a href="https://github.com/ElpsyC0ngro0/Safe-Cache">view project</a></p>
+      <p><strong>Honeypot</strong> — A Basic Honeypot that monitors and logs the attacker built using python and flask.<a href="https://github.com/ElpsyC0ngro0/Basic_honeypot">View project</a></p>
+      <p><strong>Password Strength Checker</strong> — A CLI based Tool that checks the strength of the password and suggests some strong passwords.<a href="https://github.com/ElpsyC0ngro0/password_strength_checker">View project</a></p>
+    </section>
+    
+    <section id="resume">
+    <h2>Resume</h2>
+    <div class="resume-link">
+      <a href="assets/Resume.pdf" target="_blank">📄 View My Resume</a>
+    </div>
+  </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sriramrenga2022@gmail.com">sriramrenga2022@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/ElpsyC0ngro0" target="_blank">github.com/ElpsyC0ngro0</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/sriram-renganathan" target="_blank">linkedin.com/in/sriram-renganathan</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sriram | Designed with Love💮</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleMode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('night');
+      toggleBtn.textContent = document.body.classList.contains('night') ? '🌞' : '🌙';
+    });
+  </script>
+</body>
+</html>
+
